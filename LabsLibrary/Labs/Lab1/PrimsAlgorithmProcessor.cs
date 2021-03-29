@@ -1,33 +1,10 @@
-﻿using System;
+﻿using LabsLibrary.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace LabsLibrary.Labs.Lab1
 {
-    class Edge : IComparable<Edge>
-    {
-        public int v1, v2;
-
-        public int weight;
-
-        public Edge(int v1, int v2, int weight)
-        {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.weight = weight;
-        }
-
-        public int CompareTo(Edge other)
-        {
-            if (this.weight > other.weight)
-                return 1;
-            if (this.weight < other.weight)
-                return -1;
-            else
-                return 0;
-        }
-    }
-
     static class PrimsAlgorithmProcessor
     {
         public static List<Edge> GetMSTByPrimsAlgorithm(List<Edge> edges)
