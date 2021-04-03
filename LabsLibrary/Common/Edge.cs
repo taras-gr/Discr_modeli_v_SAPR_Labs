@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LabsLibrary.Common
 {
@@ -40,6 +41,19 @@ namespace LabsLibrary.Common
             }
 
             return edges;
+        }
+
+        public static List<int> GetAdjacentedVerticesForVertex(int[][] incidenceMatrix, int vertex)
+        {
+            var adjacentedVertices = new List<int>();
+
+            for (int i = 0; i < incidenceMatrix[vertex].Length; i++)
+            {
+                if (incidenceMatrix[vertex][i] > 0)
+                    adjacentedVertices.Add(i);
+            }
+
+            return adjacentedVertices;
         }
     }
 }
