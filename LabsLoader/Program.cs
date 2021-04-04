@@ -31,7 +31,7 @@ namespace LabsLoader
 
                 while (true)
                 {
-                    Console.Write("\nEnter the lab number you want to run (0 to exit): ");
+                    Console.Write("\nEnter the lab number you want to run. For RGR press 5. (0 to exit): ");
                     labToRunNumber = int.Parse(Console.ReadLine());
                     if (labToRunNumber == 0)
                         break;

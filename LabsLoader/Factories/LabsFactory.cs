@@ -14,7 +14,7 @@ namespace LabsLoader.Factories
 
             var labsTypes = assembly.GetTypes().Where(
                 s => s.GetInterfaces().Contains(typeof(IRunnable)) &&
-                s.FullName.Split('.').Last().StartsWith("Lab"));
+                (s.FullName.Split('.').Last().StartsWith("Lab") || s.FullName.Split('.').Last().StartsWith("Rgr")));
 
             List<IRunnable> labs = new List<IRunnable>();
 
